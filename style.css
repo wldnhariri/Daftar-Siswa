@@ -16,23 +16,35 @@ table  {
     display: flex;
     flex-direction: column;
     input {
-        width: 100%;
+        width: fit-content;
+        margin-top: 0.5em;
+        border-radius: 5px;
+        border-style: solid;
+        padding: 5px;
     }
     select {
         width: 100%;
+        margin-top: 0.5em;
+        /* height: 22px; */
+        padding: 5px;
+        border-radius: 5px;
+        border-style: solid;
     }
 }
 
 .form-display {
     display: flex;
     width: fit-content;
-    gap: 1em;
+    gap: 1.3em;
 }
 
 .btn-simpan {
     height: fit-content;
     margin-top: auto;
+    border-radius: 5px;
+    padding: 5px;
 }
+
 /* Modal Simpan */
 .modal {
     display: none;
