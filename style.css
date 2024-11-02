@@ -11,6 +11,28 @@ table  {
     margin-top: 15px;
 }
 
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    input {
+        width: 100%;
+    }
+    select {
+        width: 100%;
+    }
+}
+
+.form-display {
+    display: flex;
+    width: fit-content;
+    gap: 1em;
+}
+
+.btn-simpan {
+    height: fit-content;
+    margin-top: auto;
+}
 /* Modal Simpan */
 .modal {
     display: none;

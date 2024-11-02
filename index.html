@@ -16,16 +16,27 @@
         enim?</p>
 
     <div>
-        <input type="text" id="name" placeholder="Tulis nama lengkap disini">
-        <input type="text" id="class" placeholder="Tulis kelas disini">
-        <select id="major">
-            <option>Pilih</option>
-            <option value="Teknik Instalasi Tenaga Listrik">Teknik Instalasi Tenaga Listrik</option>
-            <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
-            <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan</option>
-            <option value="Audio Video">Audio Video</option>
-        </select>
-        <button id="button" onclick="saveData()">Simpan</button>
+        <div class="form-display">
+            <div class="form">
+                <label for="">Nama</label>
+                <input type="text" id="name" placeholder="Tulis nama lengkap disini">
+            </div>
+            <div class="form">
+                <label for="">kelas</label>
+                <input type="text" id="class" placeholder="Tulis kelas disini">
+            </div>
+            <div class="form">
+                <label for="">Jurusan</label>
+                <select id="major">
+                    <option>Pilih</option>
+                    <option value="Teknik Instalasi Tenaga Listrik">Teknik Instalasi Tenaga Listrik</option>
+                    <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                    <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan</option>
+                    <option value="Audio Video">Audio Video</option>
+                </select>
+            </div>
+            <button id="button" class="btn-simpan" onclick="saveData()">Simpan</button>
+        </div>
         <table>
             <thead>
                 <tr>
