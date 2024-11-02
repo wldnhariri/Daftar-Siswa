@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Axios JSON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Aplikasi Pendataan Siswa</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, possimus. Veritatis, natus. Iusto, maiores
+        natus facilis, iure nulla eos magni a saepe placeat voluptatibus molestias, cumque nemo commodi perspiciatis
+        enim?</p>
+
+    <div>
+        <input type="text" id="name" placeholder="Tulis nama lengkap disini">
+        <input type="text" id="class" placeholder="Tulis kelas disini">
+        <select id="major">
+            <option>Pilih</option>
+            <option value="Teknik Instalasi Tenaga Listrik">Teknik Instalasi Tenaga Listrik</option>
+            <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+            <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan</option>
+            <option value="Audio Video">Audio Video</option>
+        </select>
+        <button id="button" onclick="saveData()">Simpan</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Lengkap</th>
+                    <th>Kelas</th>
+                    <th>Jurusan</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="result"></tbody>
+        </table>
+    </div>
+
+    <!-- Modal Simpan -->
+    <div id="simpanModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeSimpanModal()">&times;</span>
+            <p>Harap isi semua kolom sebelum menyimpan!</p>
+            <button onclick="closeSimpanModal()">OK</button>
+        </div>
+    </div>
+
+    <!-- Modal Edit -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeEditModal()">&times;</span>
+            <p>Apakah Anda yakin ingin mengedit data ini?</p>
+            <button onclick="confirmEdit()">Ya</button>
+            <button onclick="closeEditModal()">Tidak</button>
+        </div>
+    </div>
+
+
+    <!-- Modal Delete -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeDeleteModal()">&times;</span>
+            <p>Apakah Anda yakin ingin menghapus data ini?</p>
+            <button onclick="confirmDelete()">Ya</button>
+            <button onclick="closeDeleteModal()">Tidak</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

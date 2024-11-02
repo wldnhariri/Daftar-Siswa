@@ -1,0 +1,46 @@
+{
+  "students": [
+    {
+      "id": "024a",
+      "name": "Uchiha Asep",
+      "class": "XII TITL 1",
+      "major": "Teknik Instalasi Tenaga Listrik"
+    },
+    {
+      "id": "0362",
+      "name": "John Warta",
+      "class": "XII RPL 1",
+      "major": "Rekayasa Perangkat Lunak"
+    },
+    {
+      "id": "6be1",
+      "name": "Habib Rizieq",
+      "class": "XI TKR 4",
+      "major": "Teknik Kendaraan Ringan"
+    },
+    {
+      "id": "78de",
+      "name": "Wahyono Kardus",
+      "class": "XI TITL 2",
+      "major": "Teknik Instalasi Tenaga Listrik"
+    },
+    {
+      "id": "43e2",
+      "name": "Marbun Senju",
+      "class": "XI TITL 2",
+      "major": "Teknik Instalasi Tenaga Listrik"
+    },
+    {
+      "id": "da21",
+      "name": "Gus Patur",
+      "class": "XI AUV 1",
+      "major": "Audio Video"
+    },
+    {
+      "id": "a135",
+      "name": "Izigo Ismail",
+      "class": "X RPL 3",
+      "major": "Rekayasa Perangkat Lunak"
+    }
+  ]
+}
