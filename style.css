@@ -79,6 +79,10 @@ table {
     color: #b4c6da;
 }
 
+.btn-simpan:disabled {
+    cursor: not-allowed;
+}
+
 /* Modal Simpan */
 .modal {
     display: none;
