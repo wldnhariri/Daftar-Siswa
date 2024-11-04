@@ -2,47 +2,81 @@ body {
     font-family: sans-serif;
 }
 
-table, tr, th, td {
+table,
+tr,
+th,
+td {
     border: 1px solid black;
     padding: 5px;
 }
 
-table  {
+table {
     margin-top: 15px;
 }
 
 /* Form */
-.form {
-    display: flex;
-    flex-direction: column;
-    input {
-        width: fit-content;
-        margin-top: 0.5em;
-        border-radius: 5px;
-        border-style: solid;
-        padding: 5px;
-    }
-    select {
-        width: 100%;
-        margin-top: 0.5em;
-        /* height: 22px; */
-        padding: 5px;
-        border-radius: 5px;
-        border-style: solid;
-    }
-}
-
 .form-display {
     display: flex;
     width: fit-content;
     gap: 1.3em;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        width: fit-content;
+        margin-top: 0.5em;
+        border-radius: 5px;
+        border: 2px solid #4444;
+        padding: 5px;
+        outline: none;
+    }
+
+    input:focus {
+        border-color: green;
+    }
+
+    label {
+        font-weight: 600;
+        color: #4c5762;
+        font-size: 14px;
+    }
+
+    select {
+        width: 100%;
+        margin-top: 0.5em;
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid #4444;
+        outline: none;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    select:focus {
+        border-color: green;
+    }
+
+    ::placeholder {
+        font-weight: 500;
+        font-size: 12px;
+        color: #92a0ad;
+    }
+}
+
 .btn-simpan {
     height: fit-content;
     margin-top: auto;
     border-radius: 5px;
-    padding: 5px;
+    padding: 8.5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    border: none;
+    background-color: #e4ebf5;
+    color: #b4c6da;
 }
 
 /* Modal Simpan */

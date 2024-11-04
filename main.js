@@ -78,7 +78,7 @@ const saveData = async () => {
         })
 }
 
-// Method modal delete aja bos
+// Method modal delete
 let currentDeleteId = null;
 
 const showDeleteModal = (id) => {
