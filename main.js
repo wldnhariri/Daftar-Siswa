@@ -22,23 +22,77 @@ const confirmEdit = () => {
 };
 
 // Method modal simpan
-const showSimpanModal = () => {
-    document.getElementById("simpanModal").style.display = "block";
+const inputs = document.querySelectorAll('#name, #class, #major')
+const saveButton = document.getElementById('button')
+
+inputs.forEach(input => {
+    input.addEventListener('input', checkInputs)
+    input.addEventListener('change', checkInputs)
+})
+
+function checkInputs() {
+    const allFiled = Array.from(inputs).every(input => input.value.trim() !== '')
+    const majorSelect = document.getElementById('major').value !== ''
+
+    saveButton.disabled = !(allFiled  && majorSelect)
+
+    if (allFiled && majorSelect) {
+        saveButton.style.backgroundColor = 'green'
+        saveButton.style.color = 'white'
+    } else {
+        saveButton.style.backgroundColor = '#e4ebf5'
+        saveButton.style.color = '#b4c6da'
+    }
 }
 
-const closeSimpanModal = () => {
-    document.getElementById("simpanModal").style.display = "none";
+function handleSaveClick() {
+    if (!saveButton.disabled) {
+        document.getElementById('confirmModal').style.display = 'block'
+    }
+}
+
+function closeConfirmModal() {
+    document.getElementById('confirmModal').style.display = 'none'
+}
+
+async function confirmSave() {
+    const nameForm = document.getElementById(`name`).value.trim()
+    const classForm = document.getElementById(`class`).value.trim()
+    const majorForm = document.getElementById(`major`).value.trim()
+
+    await axios.post(`http://localhost:3000/students`, {
+        name: nameForm,
+        class: classForm,
+        major: majorForm
+    })
+        .then((response) => {
+            console.log(response)
+            getData()
+            closeConfirmModal()
+        })
+        .catch((error) => {
+            console.log(error.message)
+        })
+}
+
+// Method update
+const checkUpdateInputs = () => {
+    const nameForm = document.getElementById('name').value.trim()
+    const classForm = document.getElementById('class').value.trim()
+    const majorForm = document.getElementById('major').value.trim()
+
+    return nameForm !== '' && classForm !== '' && majorForm !== ''
 }
 
 const updateData = async (id) => {
-    let nameForm = document.getElementById(`name`).value
-    let classForm = document.getElementById(`class`).value
-    let majorForm = document.getElementById(`major`).value
-
-    if (nameForm === '' || classForm === '' || majorForm === '') {
-        showSimpanModal();
-        return;
+    if (!checkUpdateInputs()) {
+        handleSaveClick()
+        return
     }
+
+    const nameForm = document.getElementById(`name`).value.trim()
+    const classForm = document.getElementById(`class`).value.trim()
+    const majorForm = document.getElementById(`major`).value.trim()
 
     await axios.patch(`http://localhost:3000/students/${id}`, {
         name: nameForm,
@@ -48,30 +102,7 @@ const updateData = async (id) => {
         .then((response) => {
             console.log(response)
             getData();
-        })
-        .catch((error) => {
-            console.log(error.message)
-        })
-}
-
-const saveData = async () => {
-    let nameForm = document.getElementById(`name`).value.trim()
-    let classForm = document.getElementById(`class`).value.trim()
-    let majorForm = document.getElementById(`major`).value.trim()
-
-    if (nameForm === '' || classForm === '' || majorForm === '') {
-        showSimpanModal();
-        return;
-    }
-
-    await axios.post(`http://localhost:3000/students`, {
-        name: nameForm,
-        class: classForm,
-        major: majorForm
-    })
-        .then((response) => {
-            console.log(response)
-            getData();
+            closeConfirmModal()
         })
         .catch((error) => {
             console.log(error.message)
@@ -104,19 +135,6 @@ const confirmDelete = async () => {
         closeDeleteModal();
     }
 }
-
-// const deleteData = async (id) => {
-//     if (confirm("Apakah Anda yakin ingin menghapus data ini?")) {
-//         await axios.delete(`http://localhost:3000/students/${id}`)
-//             .then((response) => {
-//                 console.log(response)
-//                 getData()
-//             })
-//             .catch((error) => {
-//                 console.log(error.message)
-//             })
-//     }
-// }
 
 const getData = async () => {
     await axios.get(`http://localhost:3000/students`)
