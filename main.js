@@ -34,7 +34,7 @@ function checkInputs() {
     const allFiled = Array.from(inputs).every(input => input.value.trim() !== '')
     const majorSelect = document.getElementById('major').value !== ''
 
-    saveButton.disabled = !(allFiled  && majorSelect)
+    saveButton.disabled = !(allFiled && majorSelect)
 
     if (allFiled && majorSelect) {
         saveButton.style.backgroundColor = 'green'
