@@ -1,3 +1,22 @@
+// Tutup modal diluar konten
+document.getElementById('confirmModal').addEventListener('click', function (event) {
+    if (event.target.classList.contains('modal')) {
+        closeConfirmModal()
+    }
+})
+
+document.getElementById('editModal').addEventListener('click', function (event) {
+    if (event.target.classList.contains('modal')) {
+        closeEditModal()
+    }
+})
+
+document.getElementById('deleteModal').addEventListener('click', function (event) {
+    if (event.target.classList.contains('modal')) {
+        closeDeleteModal()
+    }
+})
+
 // Method modal edit
 let currentEditData = {};
 
