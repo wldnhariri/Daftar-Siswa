@@ -39,6 +39,14 @@ function checkInputs() {
     if (allFiled && majorSelect) {
         saveButton.style.backgroundColor = 'green'
         saveButton.style.color = 'white'
+
+        saveButton.addEventListener('mouseover', () => {
+            saveButton.style.backgroundColor = '#098a4e'
+        })
+
+        saveButton.addEventListener('mouseout', () => {
+            saveButton.style.backgroundColor = 'green'
+        })
     } else {
         saveButton.style.backgroundColor = '#e4ebf5'
         saveButton.style.color = '#b4c6da'
