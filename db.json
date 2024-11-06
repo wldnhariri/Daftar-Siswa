@@ -44,7 +44,7 @@
     },
     {
       "id": "89da",
-      "name": "Ijoeel",
+      "name": "Ijoeel Jakarte",
       "class": "XI TITL 2",
       "major": "Teknik Instalasi Tenaga Listrik"
     },
@@ -52,6 +52,18 @@
       "id": "fcee",
       "name": "Gus Surya",
       "class": "XII TKR 3",
+      "major": "Teknik Kendaraan Ringan"
+    },
+    {
+      "id": "4524",
+      "name": "Anthony Junior",
+      "class": "XII AUV 3",
+      "major": "Audio Video"
+    },
+    {
+      "id": "3598",
+      "name": "Turbor",
+      "class": "X TKR 2",
       "major": "Teknik Kendaraan Ringan"
     }
   ]
