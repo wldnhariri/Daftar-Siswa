@@ -184,8 +184,8 @@ const getData = async () => {
                         <td>${students[i].class}</td>
                         <td>${students[i].major}</td>
                         <td>
-                            <button onclick="showConfirmEditModal('${students[i].id}', '${students[i].name}', '${students[i].class}', '${students[i].major}')">edit</button>
-                            <button onclick="showDeleteModal('${students[i].id}')">delete</button>
+                            <button class="btn-edit" onclick="showConfirmEditModal('${students[i].id}', '${students[i].name}', '${students[i].class}', '${students[i].major}')">edit</button>
+                            <button class="btn-delete" onclick="showDeleteModal('${students[i].id}')">delete</button>
                         </td>
                     </tr>
                     `
