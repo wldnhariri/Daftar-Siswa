@@ -45,13 +45,13 @@ function checkInputs() {
     }
 }
 
-function handleSaveClick() {
+const handleSaveClick = () => {
     if (!saveButton.disabled) {
         document.getElementById('confirmModal').style.display = 'block'
     }
 }
 
-function closeConfirmModal() {
+const closeConfirmModal = () => {
     document.getElementById('confirmModal').style.display = 'none'
 }
 
@@ -75,7 +75,11 @@ async function confirmSave() {
         })
 }
 
-// Method update
+// Method update (ubah)
+const showConfirmModal = () => {
+    document.getElementById('confirmModal').style.display = 'block'
+}
+
 const checkUpdateInputs = () => {
     const nameForm = document.getElementById('name').value.trim()
     const classForm = document.getElementById('class').value.trim()
@@ -85,29 +89,31 @@ const checkUpdateInputs = () => {
 }
 
 const updateData = async (id) => {
-    if (!checkUpdateInputs()) {
-        handleSaveClick()
-        return
+    if (checkUpdateInputs()) {
+        showConfirmModal();
+
+        document.getElementById('confirmButton').onclick = async () => {
+            const nameForm = document.getElementById('name').value.trim();
+            const classForm = document.getElementById('class').value.trim();
+            const majorForm = document.getElementById('major').value.trim();
+
+            try {
+                const response = await axios.patch(`http://localhost:3000/students/${id}`, {
+                    name: nameForm,
+                    class: classForm,
+                    major: majorForm
+                });
+                console.log(response);
+                getData();
+                closeConfirmModal();
+            } catch (error) {
+                console.log(error.message);
+            }
+        };
+    } else {
+        alert("Harap lengkapi semua input sebelum mengupdate data.");
     }
-
-    const nameForm = document.getElementById(`name`).value.trim()
-    const classForm = document.getElementById(`class`).value.trim()
-    const majorForm = document.getElementById(`major`).value.trim()
-
-    await axios.patch(`http://localhost:3000/students/${id}`, {
-        name: nameForm,
-        class: classForm,
-        major: majorForm
-    })
-        .then((response) => {
-            console.log(response)
-            getData();
-            closeConfirmModal()
-        })
-        .catch((error) => {
-            console.log(error.message)
-        })
-}
+};
 
 // Method modal delete
 let currentDeleteId = null;
