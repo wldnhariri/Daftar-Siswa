@@ -84,34 +84,92 @@ table {
     cursor: not-allowed;
 }
 
-.btn-edit, .btn-ya {
+.btn-ya {
     border-radius: 5px;
-    padding: 8.5px;
+    padding: 5px;
     cursor: pointer;
     font-weight: 600;
     font-size: 12px;
     border: none;
-    background-color: green;
+    background-color: #424ec6;
     color: white;
+    width: 50px;
 }
 
-.btn-edit:hover, .btn-ya:hover {
-    background-color: #098a4e;
+.btn-ya:hover {
+    opacity: 0.9;
 }
 
-.btn-delete, .btn-tidak {
+.btn-edit {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 2px 2px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0 18px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-edit:hover {
+    background-color: #fff;
+}
+
+.btn-edit:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+.btn-tidak {
     border-radius: 5px;
-    padding: 8.5px;
+    padding: 5px;
     cursor: pointer;
     font-weight: 600;
     font-size: 12px;
     border: none;
-    background-color: red;
+    background-color: #cd2701;
     color: white;
+    width: 50px;
 }
 
-.btn-delete:hover, .btn-tidak:hover {
-    opacity: 0.8;
+.btn-tidak:hover {
+    opacity: 0.9;
+}
+
+.btn-delete {
+    background-color: #fbeee0;
+    border: 2px solid #cd2701;
+    border-radius: 30px;
+    box-shadow: #cd2701 2px 2px 0 0;
+    color: #cd2701;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0 18px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-delete:hover {
+    background-color: #fff;
+}
+
+.btn-delete:active {
+    box-shadow: #cd2701 2px 2px 0 0;
+    transform: translate(2px, 2px);
 }
 
 /* Modal Simpan */
