@@ -83,6 +83,7 @@ table {
 .btn-simpan:disabled {
     cursor: not-allowed;
 }
+/*  */
 
 .btn-ya {
     border-radius: 5px;
@@ -202,4 +203,29 @@ table {
     right: 15px;
     font-size: 24px;
     cursor: pointer;
+}
+
+/* Responsive Handphone */
+@media (max-width: 767px) {
+    .form-display {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5em;
+    }
+
+    .form {
+        input {
+            width: 96.5%;
+        }
+    }
+
+    .btn-simpan {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .btn-edit, .btn-delete {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
