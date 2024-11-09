@@ -1,7 +1,6 @@
 {
-    "name": "json-server-example",
+    "name": "json-server-vercel",
     "version": "1.0.0",
-    "description": "A simple JSON Server example",
     "main": "server.js",
     "scripts": {
         "start": "node server.js"
