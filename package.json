@@ -1,0 +1,15 @@
+{
+    "name": "json-server-example",
+    "version": "1.0.0",
+    "description": "A simple JSON Server example",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "json-server": "^0.17.0"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
