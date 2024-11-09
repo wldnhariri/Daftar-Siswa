@@ -1,0 +1,70 @@
+{
+  "students": [
+    {
+      "id": "024a",
+      "name": "Uchiha Asep",
+      "class": "XII TITL 1",
+      "major": "Teknik Instalasi Tenaga Listrik"
+    },
+    {
+      "id": "0362",
+      "name": "John Warta",
+      "class": "XII RPL 1",
+      "major": "Rekayasa Perangkat Lunak"
+    },
+    {
+      "id": "6be1",
+      "name": "Habib Rizieq",
+      "class": "XI TKR 4",
+      "major": "Teknik Kendaraan Ringan"
+    },
+    {
+      "id": "78de",
+      "name": "Wahyono Kardus",
+      "class": "XI TITL 2",
+      "major": "Teknik Instalasi Tenaga Listrik"
+    },
+    {
+      "id": "43e2",
+      "name": "Marbun Senju",
+      "class": "XI TITL 2",
+      "major": "Teknik Instalasi Tenaga Listrik"
+    },
+    {
+      "id": "da21",
+      "name": "Gus Patur",
+      "class": "XI AUV 1",
+      "major": "Audio Video"
+    },
+    {
+      "id": "a64f",
+      "name": "Saiful Hutapea",
+      "class": "X RPL 1",
+      "major": "Rekayasa Perangkat Lunak"
+    },
+    {
+      "id": "89da",
+      "name": "Ijoeel Jakarta",
+      "class": "XI TITL 2",
+      "major": "Teknik Instalasi Tenaga Listrik"
+    },
+    {
+      "id": "fcee",
+      "name": "Gus Surya",
+      "class": "XII TKR 3",
+      "major": "Teknik Kendaraan Ringan"
+    },
+    {
+      "id": "4524",
+      "name": "Anthony Junior",
+      "class": "XII AUV 3",
+      "major": "Audio Video"
+    },
+    {
+      "id": "3598",
+      "name": "Turbor",
+      "class": "X TKR 2",
+      "major": "Teknik Kendaraan Ringan"
+    }
+  ]
+}
