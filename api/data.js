@@ -1,19 +1,11 @@
-import { error } from 'console';
-import fs from 'fs';
+import { createServer } from 'json-server';
 import path from 'path';
 
-export default function handler(req, res) {
-    const filePath = path.join(process.cwd(), 'db.json')
+const server = createServer();
+const router = createServer.router(path.join(__dirname, 'db.json'));
+const middlewares = createServer.defaults();
 
-    fs.readFile(filePath, 'utf8', (err, data) => {
-        if (err) {
-            console.error(err)
-            res.status(500).json({
-                error: 'Failed to load data'
-            })
-            return
-        }
+server.use(middlewares);
+server.use(router);
 
-        res.status(200).json(JSON.parse(data))
-    })
-}
+export default server;
