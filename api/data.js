@@ -6,9 +6,11 @@ export default function handler(req, res) {
     const filePath = path.join(process.cwd(), 'db.json')
 
     fs.readFile(filePath, 'utf8', (err, data) => {
-        if(err) {
+        if (err) {
             console.error(err)
-            res.status(500).json({ error: 'Failed to load data' })
+            res.status(500).json({
+                error: 'Failed to load data'
+            })
             return
         }
 
